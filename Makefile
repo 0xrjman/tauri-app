@@ -3,12 +3,16 @@ RELEASE_VERSION 									:= 0.0.1
 .PHONY: init
 init:
 	echo "version: ${RELEASE_VERSION}"
-	yarn install
+	pnpm install
 
 .PHONY: run
 run:
-	yarn tauri dev
+	pnpm tauri dev
 
 .PHONY: build
 build:
-	yarn tauri build
+	pnpm tauri build
+
+.PHONY: build-osx
+build-osx:
+	pnpm tauri build --target aarch64-apple-darwin

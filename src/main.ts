@@ -10,4 +10,3 @@ invoke('greet', { name: 'World' })
   .then((response) => console.log(response))
 
 createApp(App).mount('#app')
-
